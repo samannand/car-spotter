@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CarSpotter</string>
     <string name="app_title">Car Spotter</string>
+    <string name="go_button_text">Go</string>
 </resources>
