@@ -2,4 +2,8 @@
     <string name="app_name">CarSpotter</string>
     <string name="app_title">Car Spotter</string>
     <string name="go_button_text">Go</string>
+    <string name="title_activity_app_navigation">AppNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
