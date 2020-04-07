@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_collection">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="sga111.seng440.carspotter.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_collection"
+        android:name="sga111.seng440.carspotter.ui.home.CollectionFragment"
+        android:label="@string/title_collection"
+        tools:layout="@layout/fragment_collection" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="sga111.seng440.carspotter.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_spotting"
+        android:name="sga111.seng440.carspotter.ui.dashboard.SpottingFragment"
+        android:label="@string/title_spotting"
+        tools:layout="@layout/fragment_spotting" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="sga111.seng440.carspotter.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_achievements"
+        android:name="sga111.seng440.carspotter.ui.notifications.AchievementsFragment"
+        android:label="@string/title_achievements"
+        tools:layout="@layout/fragment_achievements" />
 </navigation>

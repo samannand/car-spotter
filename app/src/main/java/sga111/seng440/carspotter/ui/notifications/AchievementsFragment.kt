@@ -1,4 +1,4 @@
-package sga111.seng440.carspotter.ui.dashboard
+package sga111.seng440.carspotter.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import sga111.seng440.carspotter.R
 
-class DashboardFragment : Fragment() {
+class AchievementsFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var achievementsViewModel: AchievementsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        achievementsViewModel =
+            ViewModelProviders.of(this).get(AchievementsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_achievements, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        achievementsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

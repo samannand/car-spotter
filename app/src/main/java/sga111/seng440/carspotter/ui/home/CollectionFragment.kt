@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import sga111.seng440.carspotter.R
 
-class HomeFragment : Fragment() {
+class CollectionFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var collectionViewModel: CollectionViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        collectionViewModel =
+            ViewModelProviders.of(this).get(CollectionViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_collection, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        collectionViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
