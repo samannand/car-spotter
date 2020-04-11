@@ -6,4 +6,15 @@
     <string name="title_collection">Collection</string>
     <string name="title_spotting">Spot</string>
     <string name="title_achievements">Achievements</string>
+
+    <!-- Add car to collection -->
+    <string name="title_car_make">Make</string>
+    <string name="title_car_model">Model</string>
+    <string name="title_car_year">Year</string>
+
+    <string name="example_car_make">Porsche</string>
+    <string name="example_car_model">911 GT3</string>
+    <string name="example_car_year">2007</string>
+    <string name="title_car_add">Add to collection</string>
+
 </resources>

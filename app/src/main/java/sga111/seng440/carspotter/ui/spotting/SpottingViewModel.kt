@@ -6,8 +6,4 @@ import androidx.lifecycle.ViewModel
 
 class SpottingViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is spotting Fragment"
-    }
-    val text: LiveData<String> = _text
 }
