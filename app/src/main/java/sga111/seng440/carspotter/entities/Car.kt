@@ -5,14 +5,15 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "car_table")
 class Car (
-    @PrimaryKey(autoGenerate = true) val id: Int,
     val make: String,
     val model: String,
     val year: Int,
-    val comments: String
+    val comments: String?
     ){
+        @PrimaryKey(autoGenerate = true)
+        var id: Int = 0 // Using val causes error
 
-    override fun toString(): String {
-        return "${year.toString()}, ${make.capitalize()} ${model.capitalize()}"
-    }
+        override fun toString(): String {
+            return "${year.toString()}, ${make.capitalize()} ${model.capitalize()}"
+        }
 }

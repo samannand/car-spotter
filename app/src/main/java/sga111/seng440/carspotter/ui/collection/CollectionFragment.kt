@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,8 +22,9 @@ class CollectionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        collectionViewModel =
-            ViewModelProviders.of(this).get(CollectionViewModel::class.java)
+//        collectionViewModel =
+//            ViewModelProviders.of(this).get(CollectionViewModel::class.java)
+
         val view = inflater.inflate(R.layout.fragment_collection, container, false)
 
 
@@ -30,6 +32,11 @@ class CollectionFragment : Fragment() {
         val adapter = CarListAdapter(context!!)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context!!)
+
+        collectionViewModel = ViewModelProvider(this).get(CollectionViewModel::class.java)
+        collectionViewModel.allCars.observe(viewLifecycleOwner, Observer { cars ->
+            cars?.let { adapter.setCars(it) }
+        })
 
         return view
     }

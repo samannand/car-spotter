@@ -15,7 +15,7 @@ class CollectionViewModel(application: Application) : AndroidViewModel(applicati
     val allCars: LiveData<List<Car>>
 
     init {
-        val carDao = CarSpotterDatabase.getDatabase(application).carDao()
+        val carDao = CarSpotterDatabase.getDatabase(application, viewModelScope).carDao()
         repository = CarRepository(carDao)
         allCars = repository.allCars
     }
