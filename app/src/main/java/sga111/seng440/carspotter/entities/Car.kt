@@ -11,4 +11,8 @@ class Car (
     val year: Int,
     val comments: String
     ){
+
+    override fun toString(): String {
+        return "${year.toString()}, ${make.capitalize()} ${model.capitalize()}"
+    }
 }

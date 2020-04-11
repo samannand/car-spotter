@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_collection"
-        android:name="sga111.seng440.carspotter.ui.home.CollectionFragment"
+        android:name="sga111.seng440.carspotter.ui.collection.CollectionFragment"
         android:label="@string/title_collection"
         tools:layout="@layout/fragment_collection" />
 
     <fragment
         android:id="@+id/navigation_spotting"
-        android:name="sga111.seng440.carspotter.ui.dashboard.SpottingFragment"
+        android:name="sga111.seng440.carspotter.ui.spotting.SpottingFragment"
         android:label="@string/title_spotting"
         tools:layout="@layout/fragment_spotting" />
 
     <fragment
         android:id="@+id/navigation_achievements"
-        android:name="sga111.seng440.carspotter.ui.notifications.AchievementsFragment"
+        android:name="sga111.seng440.carspotter.ui.achievements.AchievementsFragment"
         android:label="@string/title_achievements"
         tools:layout="@layout/fragment_achievements" />
 </navigation>

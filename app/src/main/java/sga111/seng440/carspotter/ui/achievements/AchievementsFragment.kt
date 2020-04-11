@@ -1,4 +1,4 @@
-package sga111.seng440.carspotter.ui.notifications
+package sga111.seng440.carspotter.ui.achievements
 
 import android.os.Bundle
 import android.view.LayoutInflater

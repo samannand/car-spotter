@@ -1,4 +1,4 @@
-package sga111.seng440.carspotter.ui.home
+package sga111.seng440.carspotter.ui.spotting
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import sga111.seng440.carspotter.R
 
-class CollectionFragment : Fragment() {
+class SpottingFragment : Fragment() {
 
-    private lateinit var collectionViewModel: CollectionViewModel
+    private lateinit var spottingViewModel: SpottingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        collectionViewModel =
-            ViewModelProviders.of(this).get(CollectionViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_collection, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        collectionViewModel.text.observe(viewLifecycleOwner, Observer {
+        spottingViewModel =
+            ViewModelProviders.of(this).get(SpottingViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_spotting, container, false)
+        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        spottingViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
