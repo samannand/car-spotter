@@ -7,7 +7,7 @@
     tools:context=".ui.spotting.SpottingFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/make_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_make"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -26,10 +26,10 @@
         android:inputType="textPersonName"
         android:text="@string/example_car_make"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/make_heading" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/model_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -37,10 +37,10 @@
         android:text="@string/title_car_model"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_make" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit_model"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -49,10 +49,10 @@
         android:inputType="textPersonName"
         android:text="@string/example_car_model"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/model_heading" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/year_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -60,10 +60,10 @@
         android:text="@string/title_car_year"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_model" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edit_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -72,10 +72,10 @@
         android:inputType="number"
         android:text="@string/example_car_year"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/year_heading" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_to_collection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -83,6 +83,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_year" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
