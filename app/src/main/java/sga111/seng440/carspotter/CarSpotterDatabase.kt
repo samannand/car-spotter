@@ -28,13 +28,15 @@ public abstract class CarSpotterDatabase : RoomDatabase() {
         }
 
         suspend fun populateDatabase(carDao: CarDao) {
-            carDao.deleteAll()
 
-            var car = Car("Ford","Escort",1966, null)
-            carDao.insert(car);
+            // Uncomment to clear DB each time the app is loaded
+            //carDao.deleteAll()
 
-            car = Car("Nissan","Skyline",1991, null)
-            carDao.insert(car)
+//            var car = Car("Ford","Escort",1966, null)
+//            carDao.insert(car);
+//
+//            car = Car("Nissan","Skyline",1991, null)
+//            carDao.insert(car)
         }
     }
 
