@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.recyclerview_item.view.*
 import sga111.seng440.carspotter.R
 import sga111.seng440.carspotter.entities.Car
 
@@ -18,7 +17,9 @@ class CarListAdapter internal constructor(
     private var cars = emptyList<Car>()
 
     inner class CarViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val carItemView: TextView = itemView.findViewById(R.id.carItemView)
+        val carItemView: TextView = itemView.findViewById(R.id.makeText)
+        val carModelView: TextView = itemView.findViewById(R.id.modelText)
+        val carYearView: TextView = itemView.findViewById(R.id.yearText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
@@ -28,7 +29,9 @@ class CarListAdapter internal constructor(
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
         val current = cars[position]
-        holder.carItemView.text = current.toString()
+        holder.carItemView.text = current.model
+        holder.carModelView.text = current.make
+        holder.carYearView.text = current.year.toString()
     }
 
     internal fun setCars(cars: List<Car>) {
