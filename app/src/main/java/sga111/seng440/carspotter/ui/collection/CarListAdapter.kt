@@ -1,6 +1,7 @@
 package sga111.seng440.carspotter.ui.collection
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,8 @@ import sga111.seng440.carspotter.R
 import sga111.seng440.carspotter.entities.Car
 
 class CarListAdapter internal constructor(
-    context: Context
+    context: Context,
+    val clickListener: (Car) -> Unit
 ) : RecyclerView.Adapter<CarListAdapter.CarViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -23,8 +25,16 @@ class CarListAdapter internal constructor(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
-        val itemView = inflater.inflate(R.layout.recyclerview_item, parent, false)
-        return CarViewHolder(itemView)
+        val view = inflater.inflate(R.layout.recyclerview_item, parent, false)
+        val holder = CarViewHolder(view)
+
+        view.setOnClickListener {
+            Log.d("sizeOfCars", cars.size.toString());
+            Log.d("attemptingToIndex", holder.adapterPosition.toString());
+            clickListener(cars[holder.adapterPosition])
+        }
+
+        return CarViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
@@ -32,6 +42,12 @@ class CarListAdapter internal constructor(
         holder.carItemView.text = current.model
         holder.carModelView.text = current.make
         holder.carYearView.text = current.year.toString()
+
+        holder.itemView.setOnClickListener {
+            Log.d("sizeOfCars", cars.size.toString());
+            Log.d("attemptingToIndex", holder.adapterPosition.toString());
+            clickListener(cars[holder.adapterPosition])
+        }
     }
 
     internal fun setCars(cars: List<Car>) {

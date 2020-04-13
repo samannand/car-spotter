@@ -1,5 +1,6 @@
 package sga111.seng440.carspotter.ui.collection
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,7 +32,13 @@ class CollectionFragment : Fragment() {
 
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview)
-        val adapter = CarListAdapter(context!!)
+        val adapter = CarListAdapter(context!!) {
+            val intent = Intent(context!!, MoreDetailsActivity::class.java)
+            intent.putExtra("make", it.make)
+            intent.putExtra("model", it.model)
+            startActivity(intent)
+        }
+
         recyclerView.adapter = adapter
         //recyclerView.layoutManager = LinearLayoutManager(context!!)
         recyclerView.layoutManager = GridLayoutManager(context!!, 2)
