@@ -1,6 +1,8 @@
 package sga111.seng440.carspotter
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController

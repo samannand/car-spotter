@@ -5,6 +5,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -45,6 +46,8 @@ class SpottingFragment : Fragment() {
                     context!!,
                     R.string.empty_fields,
                     Toast.LENGTH_LONG).show()
+                val mShakeAnimation = AnimationUtils.loadAnimation(context!!, R.anim.button_shake);
+                button.startAnimation(mShakeAnimation)
             } else {
                 val car = Car(editMakeView.text.toString(), editModelView.text.toString(), editYearView.text.toString().toInt(), null)
                 spottingViewModel.insert(car)

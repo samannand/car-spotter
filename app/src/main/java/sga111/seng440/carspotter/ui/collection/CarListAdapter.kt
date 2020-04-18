@@ -39,8 +39,8 @@ class CarListAdapter internal constructor(
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
         val current = cars[position]
-        holder.carItemView.text = current.model
-        holder.carModelView.text = current.make
+        holder.carItemView.text = current.make
+        holder.carModelView.text = current.model
         holder.carYearView.text = current.year.toString()
 
         holder.itemView.setOnClickListener {
