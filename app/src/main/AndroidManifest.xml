@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.collection.MoreDetailsActivity"
             android:parentActivityName=".AppNavigation"
+            android:label="@string/more_details"
             ></activity>
         <activity
             android:name=".AppNavigation"

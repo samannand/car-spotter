@@ -22,7 +22,6 @@ class MoreDetailsActivity : AppCompatActivity() {
         val uriString: String? = intent.getStringExtra("image")
         val isElectric = intent.getBooleanExtra("isElectric", false)
         val year = intent.getStringExtra("year")
-        title = "More Details"
         setContentView(R.layout.more_details)
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)

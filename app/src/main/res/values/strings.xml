@@ -30,5 +30,6 @@
 
     <!-- Achievements View -->
     <string name="achievements_coming_soon">Achievements coming soon</string>
+    <string name="more_details">More Details</string>
 
 </resources>
