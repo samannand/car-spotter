@@ -29,6 +29,7 @@ class SpottingFragment : Fragment() {
     private var galleryCode: Int = 1
     private lateinit var imageText: TextView
     private lateinit var imageView: ImageView
+    private lateinit var checkBox: CheckBox
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +43,7 @@ class SpottingFragment : Fragment() {
         editModelView = view.findViewById(R.id.edit_model)
         editYearView = view.findViewById(R.id.edit_year)
         imageView = view.findViewById(R.id.car_image_view)
+        checkBox = view.findViewById(R.id.electric_checkbox)
 
         val button = view.findViewById<Button>(R.id.add_to_collection)
         val photoButton : Button = view.findViewById(R.id.photo_button)
@@ -55,7 +57,7 @@ class SpottingFragment : Fragment() {
                 val mShakeAnimation = AnimationUtils.loadAnimation(context!!, R.anim.button_shake);
                 button.startAnimation(mShakeAnimation)
             } else {
-                val car = Car(editMakeView.text.toString(), editModelView.text.toString(), editYearView.text.toString().toInt(), null)
+                val car = Car(editMakeView.text.toString(), editModelView.text.toString(), editYearView.text.toString().toInt(), null, checkBox.isChecked)
                 spottingViewModel.insert(car)
                 clearValues()
                 view.findNavController().navigate(R.id.navigation_collection)

@@ -9,7 +9,8 @@ class Car (
     val make: String,
     val model: String,
     val year: Int,
-    val comments: String?
+    val comments: String?,
+    val isElectric: Boolean
     ){
         @PrimaryKey(autoGenerate = true)
         var id: Int = 0 // Using val causes error

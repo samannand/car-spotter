@@ -21,7 +21,6 @@ class CarListAdapter internal constructor(
     inner class CarViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val carItemView: TextView = itemView.findViewById(R.id.makeText)
         val carModelView: TextView = itemView.findViewById(R.id.modelText)
-        val carYearView: TextView = itemView.findViewById(R.id.yearText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
@@ -41,7 +40,6 @@ class CarListAdapter internal constructor(
         val current = cars[position]
         holder.carItemView.text = current.make
         holder.carModelView.text = current.model
-        holder.carYearView.text = current.year.toString()
 
         holder.itemView.setOnClickListener {
             Log.d("sizeOfCars", cars.size.toString());

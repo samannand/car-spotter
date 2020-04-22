@@ -35,6 +35,8 @@ class CollectionFragment : Fragment() {
             intent.putExtra("make", it.make)
             intent.putExtra("model", it.model)
             intent.putExtra("image", it.image)
+            intent.putExtra("year", it.year.toString())
+            intent.putExtra("isElectric", it.isElectric)
             startActivity(intent)
         }
 

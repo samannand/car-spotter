@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import sga111.seng440.carspotter.dao.CarDao
 import sga111.seng440.carspotter.entities.Car
 
-@Database(entities = arrayOf(Car::class), version = 2, exportSchema = false)
+@Database(entities = arrayOf(Car::class), version = 3, exportSchema = false)
 public abstract class CarSpotterDatabase : RoomDatabase() {
 
     abstract fun carDao(): CarDao

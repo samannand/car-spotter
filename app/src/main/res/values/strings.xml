@@ -24,6 +24,8 @@
     <!-- More details View -->
     <string name="model">Model</string>
     <string name="make">Make</string>
+    <string name="year">Year</string>
+    <string name="electric_symbol">⚡</string>
     <string name="find_out_more">Find out more</string>
 
     <!-- Achievements View -->
