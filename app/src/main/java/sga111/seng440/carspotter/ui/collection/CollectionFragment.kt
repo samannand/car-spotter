@@ -34,6 +34,7 @@ class CollectionFragment : Fragment() {
             val intent = Intent(context!!, MoreDetailsActivity::class.java)
             intent.putExtra("make", it.make)
             intent.putExtra("model", it.model)
+            intent.putExtra("image", it.image)
             startActivity(intent)
         }
 

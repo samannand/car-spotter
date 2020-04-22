@@ -6,8 +6,4 @@ import androidx.lifecycle.ViewModel
 
 class AchievementsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is achievements Fragment"
-    }
-    val text: LiveData<String> = _text
 }

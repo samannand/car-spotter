@@ -18,9 +18,15 @@
     <string name="title_car_add">Add to collection</string>
     <string name="empty_fields">Some fields are empty</string>
 
+    <string name="electric">Electric ?</string>
+    <string name="select_photo">Select Photo</string>
+
     <!-- More details View -->
     <string name="model">Model</string>
     <string name="make">Make</string>
     <string name="find_out_more">Find out more</string>
+
+    <!-- Achievements View -->
+    <string name="achievements_coming_soon">Achievements coming soon</string>
 
 </resources>

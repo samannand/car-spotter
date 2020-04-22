@@ -1,5 +1,6 @@
 package sga111.seng440.carspotter.entities
 
+import android.net.Uri
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -12,6 +13,7 @@ class Car (
     ){
         @PrimaryKey(autoGenerate = true)
         var id: Int = 0 // Using val causes error
+        var image: String? = null
 
         override fun toString(): String {
             return "${year.toString()}, ${make.capitalize()} ${model.capitalize()}"
