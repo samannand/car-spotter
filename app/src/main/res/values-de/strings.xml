@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoSpotter</string>
+    <string name="app_title">Auto Spotter</string>
+    <string name="go_button_text">Gehen</string>
+    <string name="title_activity_app_navigation">AppSteuerung</string>
+    <string name="title_collection">Kollektion</string>
+    <string name="title_spotting">Entdecken</string>
+    <string name="title_achievements">Erzielen</string>
+    <string name="title_car_make">Marke</string>
+    <string name="title_car_model">Modell</string>
+    <string name="title_car_year">Jahr</string>
+    <string name="example_car_make">Porsche</string>
+    <string name="example_car_model">Neun elf</string>
+    <string name="example_car_year">2007</string>
+    <string name="title_car_add">Hinzufügen Kollektion</string>
+    <string name="empty_fields">Einige Felder sind leer</string>
+    <string name="electric">Elektrisch ?</string>
+    <string name="select_photo">"Foto Auswählen "</string>
+    <string name="make">Marke</string>
+    <string name="model">Modell</string>
+    <string name="year">Jahr</string>
+    <string name="electric_symbol">⚡</string>
+    <string name="find_out_more">"Finde mehr heraus "</string>
+    <string name="achievements_coming_soon">Erfolge folgen in Kürze</string>
+</resources>
