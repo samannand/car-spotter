@@ -20,3 +20,4 @@ class Car (
             return "${year.toString()}, ${make.capitalize()} ${model.capitalize()}"
         }
 }
+
